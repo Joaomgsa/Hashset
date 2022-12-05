@@ -2,7 +2,7 @@ package entities;
 
 import java.util.Objects;
 
-public class Product {
+public class Product{
 
     private String name;
     private Double price;
@@ -40,4 +40,14 @@ public class Product {
     public int hashCode() {
         return Objects.hash(name, price);
     }
-}
+
+    @Override
+    public String toString() {
+        return "product:{" +
+                "name:'" + name + '\'' +
+                ", price:" + price +
+                '}';
+    }
+
+    //Compara os itens da TreeSet por nome. Depende da regra de negocio.
+   }
